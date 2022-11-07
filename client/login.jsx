@@ -103,7 +103,7 @@ const init = async () => {
             return false;
     });
 
-    ReactDOM.render(<loginWindow csrf={data.csrfToken} />,
+    ReactDOM.render(<LoginWindow csrf={data.csrfToken} />,
     document.getElementById('content'));
 };
 
