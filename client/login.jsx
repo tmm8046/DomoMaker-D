@@ -48,7 +48,7 @@ const LoginWindow = (props) => {
             name='loginForm'
             onSubmit={handleLogin}
             action='/login'
-            method='POST'
+            method="POST"
             className="mainForm"
         >
             <label htmlFor="username">Username: </label>
@@ -67,7 +67,7 @@ const SignupWindow = (props) => {
             name='signupForm'
             onSubmit={handleSignup}
             action='/signup'
-            method='POST'
+            method="POST"
             className="mainForm"
         >
             <label htmlFor="username">Username: </label>
@@ -87,7 +87,7 @@ const init = async () => {
     const data = await response.json();
 
     const loginButton = document.getElementById('loginButton');
-    const signupButton = document.getElementById('signUpButton');
+    const signupButton = document.getElementById('signupButton');
 
     loginButton.addEventListener('click', (e) => {
         e.preventDefault();
