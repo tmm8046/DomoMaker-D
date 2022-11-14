@@ -99,7 +99,7 @@ const init = async () => {
     signupButton.addEventListener('click', (e) => {
         e.preventDefault();
         ReactDOM.render(<SignupWindow csrf={data.csrfToken} />,
-            document.querySelector('content'));
+            document.getElementById('content'));
             return false;
     });
 

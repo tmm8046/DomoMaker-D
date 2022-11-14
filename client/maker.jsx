@@ -13,7 +13,7 @@ const handleDomo = (e) => {
         return false;
     }
 
-    helper.sendPost(e.target.action, {name, age, _csrf}, loadDomosFromServer);
+    sendPost(e.target.action, {name, age, _csrf}, loadDomosFromServer);
 
     return false;
 }
@@ -39,7 +39,7 @@ const DomoForm = (props) => {
 }
 
 const DomoList = (props) => {
-    if(props.domo.length === 0) {
+    if(props.domos.length === 0) {
         return (
             <div className="domoList">
                 <h3 className="emptyDomo">No Domos Yet!</h3>
@@ -89,3 +89,5 @@ const init = async () => {
 
     loadDomosFromServer();
 }
+
+window.onload = init;
