@@ -17,6 +17,12 @@ const DomoSchema = new mongoose.Schema({
     min: 0,
     require: true,
   },
+  // New Attribute
+  height: {
+    type: Number,
+    min: 0,
+    require: true,
+  },
   owner: {
     type: mongoose.Schema.ObjectId,
     required: true,
@@ -31,6 +37,7 @@ const DomoSchema = new mongoose.Schema({
 DomoSchema.statics.toAPI = (doc) => ({
   name: doc.name,
   age: doc.age,
+  height: doc.height,
 });
 
 DomoSchema.statics.findByOwner = (ownerId, callback) => {
