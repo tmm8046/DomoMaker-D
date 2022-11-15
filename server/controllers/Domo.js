@@ -44,11 +44,10 @@ const deleteDomos = async (req, res) => Domo.findByOwner(req.session.account._id
     console.log(err);
     return res.status(400).json({ error: 'An error has occured!' });
   }
-  const domos = res.json({ domos: docs });
+  // const domos = res.json({ domos: docs });
 
-  delete domos;
-
-  return domos;
+  // return delete domos;
+  return res.json({ domos: docs });
 });
 
 module.exports = {
